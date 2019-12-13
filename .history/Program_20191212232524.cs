@@ -43,12 +43,12 @@ namespace wholeNewWorld
           answer = Console.ReadLine();
           if (answer == "higher") //when the user types string do this
           {
-            lower = guess - 1; // subtract one
+            lower = guess--; // subtract one
             guess = (lower + upper) / 2; //binary search method
           }
           else if (answer == "lower")
           {
-            upper = guess + 1; //subtract two 
+            upper = guess++; //subtract two 
             guess = (lower + upper) / 2; //binary search method
           }
         }

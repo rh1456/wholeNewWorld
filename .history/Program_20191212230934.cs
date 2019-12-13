@@ -15,7 +15,6 @@ namespace wholeNewWorld
       var numOfGuesses = 0;
       string name;
       string answer;
-
       //test line
       Console.WriteLine("Welcome to my first C# program, enter your name to start and press enter");
       name = Console.ReadLine();
@@ -36,20 +35,20 @@ namespace wholeNewWorld
       {
         Console.WriteLine($"I think your number is {guess}, how'd I do?");
         answer = Console.ReadLine();
-        numOfGuesses++; //while thinking is true add 1 to the number of guesses 
+        numOfGuesses++;
         if (answer == "no")
         {
           Console.WriteLine("Oops is it higher or lower");
           answer = Console.ReadLine();
           if (answer == "higher") //when the user types string do this
           {
-            lower = guess - 1; // subtract one
-            guess = (lower + upper) / 2; //binary search method
+            lower = guess;
+            guess = (lower + upper) / 2; //binary search to change guess
           }
           else if (answer == "lower")
           {
-            upper = guess + 1; //subtract two 
-            guess = (lower + upper) / 2; //binary search method
+            upper = guess;
+            guess = (lower + upper) / 2; //binary search 
           }
         }
         else if (answer == "yes")
