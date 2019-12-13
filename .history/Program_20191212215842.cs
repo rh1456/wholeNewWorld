@@ -27,14 +27,14 @@ namespace wholeNewWorld
         {
           Console.WriteLine("Oops is it higher or lower");
           answer = Console.ReadLine();
-          if (answer == "higher") //when the user types string do this
+          if (answer == "higher")
           {
-            lower = guess; //the integer guess is set to the lower variable 
-            guess = (lower + upper) / 2; //binary search to change guess
+            min = guess;
+            guess = (lower + upper) / 2; //binary search 
           }
           else if (answer == "lower")
           {
-            upper = guess;
+            max = guess;
             guess = (lower + upper) / 2; //binary search 
           }
         }
